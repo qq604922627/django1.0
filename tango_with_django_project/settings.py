@@ -14,7 +14,6 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
@@ -23,7 +22,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-ub4ebu0uz5v)2njbx3@(jg%bt*v@i0ft$q#i3f)h=vmakpb-t'
+SECRET_KEY = '&-&)e%jwy3x2ujvna0t=rk25!k+pgla#u^qf!tlej)@yb2p9-g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -58,7 +57,6 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'DIRS':  [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -78,13 +76,13 @@ WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 
 # Password validation
@@ -124,8 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
-
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
